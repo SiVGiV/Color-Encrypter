@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Color Encrypter/Decrypter</title>
+	<link rel="stylesheet" href="Style.css"/>
+	
+</head>
+<body>
+	<div id="switch">
+		<img src="@Resources/encrypt.png" alt="Encrypt" class="topRow">
+		<img src="@Resources/arrow.png" id="arrow" onClick="toggle()" class="topRow"/>
+		<img src="@Resources/decrypt.png" alt="Decrypt" class="topRow"/>
+	</div>
+	<div id="container">
+		<div id="encrypt">
+			<textarea id="txtEncrypt" placeholder="Enter text to encrypt here..."></textarea>
+			<input type="button" onClick="generateImage()" value="Generate" id="enBtn">
+		</div>
+		<div id="decrypt">
+			<div id="output">
+				<p id="upTxt">Upload .png file to decrypt</p>
+				<input type="file" accept=".png" id="fileUp" onChange="decryptImage()">
+				<br/><br/><br/><br/>
+				<textarea id="outText" readonly placeholder="Output will be displayed here after upload..."></textarea>
+			</div>
+		</div>
+	</div>
+	<div id="canvas">
+		<canvas id="enCanvas"></canvas>
+	</div>
+	<script type="text/javascript" src="Scripts.js"></script>
+</body>
+</html>
